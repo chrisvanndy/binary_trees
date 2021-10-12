@@ -5,7 +5,7 @@
 /**
  * binary_tree_inorder - prints binary tree in order.
  * @tree: pointer to root node of tree to print
- * @func: function to determin order
+ * @func: function to determine order
  * Return: 0 (Success)
  */
 
