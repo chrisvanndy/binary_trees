@@ -13,7 +13,7 @@ void binary_tree_preorder(const binary_tree_t *tree, void (*func)(int))
 {
 	if (!tree || !func)
 		return;
-	
+
 	/* print the root nodes ->n value */
 	(func)(tree->n);
 	/* recursively print left / right node->n value */
