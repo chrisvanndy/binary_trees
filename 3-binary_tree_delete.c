@@ -16,6 +16,7 @@ void binary_tree_delete(binary_tree_t *tree)
 	/* because we have a pointer to a trees root */
 	/* we also R + L pointers to other nodes of the tree */
 	/* by using recursion we can traverse all nodes in tree */
+	
 	binary_tree_delete(tree->right);
 	binary_tree_delete(tree->left);
 
