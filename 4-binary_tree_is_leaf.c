@@ -3,9 +3,9 @@
 #include "binary_trees.h"
 
 /**
- * binary_tree_delete - deletes and frees a tree.
- * @tree: pointer to root node of tree to delete
- * Return: Always 0 (Success)
+ * binary_tree_is_leaf - checks to see if node is a leaf.
+ * @node: pointer to node of tree to check
+ * Return: 0 (Success)
  */
 
 int binary_tree_is_leaf(const binary_tree_t *node)
@@ -17,5 +17,4 @@ int binary_tree_is_leaf(const binary_tree_t *node)
 		return (1);
 	else
 		return (0);
-
 }
