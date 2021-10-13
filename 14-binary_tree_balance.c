@@ -3,20 +3,20 @@
 #include "binary_trees.h"
 
 /**
- * binary_tree_height - prints binary tree height from node.
+ * binary_tree_bfHeight - prints binary tree height from node.
  * @tree: pointer to root node of tree to print
  * Return: 0 (Success)
  */
 
-size_t binary_tree_bheight(const binary_tree_t *tree)
+size_t binary_tree_bfHeight(const binary_tree_t *tree)
 {
 	if (!tree)
 		return (0);
 
 	else
 	{
-		size_t rHeight = binary_tree_bheight(tree->right);
-		size_t lHeight = binary_tree_bheight(tree->left);
+		size_t rHeight = binary_tree_bfHeight(tree->right);
+		size_t lHeight = binary_tree_bfHeight(tree->left);
 
 		if (rHeight > lHeight)
 			return (rHeight + 1);
@@ -37,9 +37,9 @@ int binary_tree_balance(const binary_tree_t *tree)
 
 	else
 	{
-		size_t lHeight = binary_tree_bheight(tree->left);
-		size_t rHeight = binary_tree_bheight(tree->right);
-		
+		size_t lHeight = binary_tree_bfHeight(tree->left);
+		size_t rHeight = binary_tree_bfHeight(tree->right);
+
 		return (lHeight - rHeight);
 	}
 }
