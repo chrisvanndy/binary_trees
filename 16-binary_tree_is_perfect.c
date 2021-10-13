@@ -56,7 +56,7 @@ int check_perf(const binary_tree_t *tree)
 		return (1);
 
 	if ((tree->left == NULL && tree->right == NULL) ||
-		(tree->left != NULL && tree->right != NULL))
+			(tree->left != NULL && tree->right != NULL))
 	{
 			return (binary_tree_is_perfect(tree->right) &&
 					binary_tree_is_perfect(tree->left));
@@ -73,6 +73,9 @@ int check_perf(const binary_tree_t *tree)
 
 int binary_tree_is_perfect(const binary_tree_t *tree)
 {
+	if (!tree)
+		return (0);
+		
 	if (binary_tree_balance(tree) == 0 && check_perf(tree))
 		return (1);
 
