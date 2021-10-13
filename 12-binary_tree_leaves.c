@@ -38,6 +38,6 @@ size_t binary_tree_leaves(const binary_tree_t *tree)
 		/* if the node is a leaf, return 1. */
 		return (1);
 	
-	/* return nodes that are 
+	/* return nodes that are */
 	return (binary_tree_leaves(tree->right) + binary_tree_leaves(tree->left));
 }
